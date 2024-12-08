@@ -23,13 +23,12 @@ public class Animal {
 		return "desplazarse";
 	}
 	
-	public void totalPorTipo() {
-		System.out.println("Mamiferos:"+ Mamifero.cantidadMamiferos());
-		System.out.println("Aves:"+ Ave.cantidadAves());
-		System.out.println("Reptiles:"+ Reptil.cantidadReptiles());
-		System.out.println("Peces:"+ Pez.cantidadPeces());
-		System.out.println("Anfibios:"+ Anfibio.cantidadAnfibios());
-		System.out.println("es el numero de animales por cada subclase.");
+	public static String totalPorTipo() {
+		return "Mamiferos: " + Mamifero.cantidadMamiferos() + "\n" +
+           "Aves: " + Ave.cantidadAves() + "\n" +
+           "Reptiles: " + Reptil.cantidadReptiles() + "\n" +
+           "Peces: " + Pez.cantidadPeces() + "\n" +
+           "Anfibios: " + Anfibio.cantidadAnfibios();
 	}
 	
 	public String toString() {
@@ -44,7 +43,7 @@ public class Animal {
 		this.nombre = nombre;
 	}
 	public int edad(){
-		return edad;
+		return super.edad();
 	}
 	public void setEdad(int edad){
 		this.edad = edad;
