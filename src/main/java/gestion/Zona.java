@@ -17,9 +17,11 @@ public class Zona {
 		this.animales = new ArrayList<>();
 	}
 	
-	public void agregarAnimales(Animal animal){
-		animales.add(animal);	
-	}
+	public void agregarAnimales(Animal animal) {
+        if (animal != null && !animales.contains(animal)) {
+            animales.add(animal);
+        }
+    }
 	
 	public int cantidadAnimales() {
 		return animales.size();
@@ -42,8 +44,9 @@ public class Zona {
         return animales;
     }
 	public void setAnimales(ArrayList<Animal> animales) {
-        this.animales = animales;
+        if (animales != null) {
+            this.animales = animales;
+        }
     }
-
 
 }
