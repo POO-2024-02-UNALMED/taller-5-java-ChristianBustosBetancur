@@ -2,7 +2,7 @@ package zooAnimales;
 import gestion.Zona;
 
 public class Animal {
-	private static int totalAnimales=0;
+	private static int totalAnimales;
 	private String nombre;
 	private int edad;
 	private String habitat;
@@ -16,7 +16,6 @@ public class Animal {
 		this.genero = genero;
 		totalAnimales++;
 	}
-
 	public Animal(){
 		totalAnimales++;
 	}
@@ -26,35 +25,29 @@ public class Animal {
 	}
 	
 	public static String totalPorTipo() {
-    
-        int mamiferos = Mamifero.cantidadMamiferos();
-        int aves = Ave.cantidadAves();
-        int reptiles = Reptil.cantidadReptiles();
-        int peces = Pez.cantidadPeces();
-        int anfibios = Anfibio.cantidadAnfibios();
-
-        return "Mamiferos: " + mamiferos +
-               "\nAves: " + aves +
-               "\nReptiles: " + reptiles +
-               "\nPeces: " + peces +
-               "\nAnfibios: " + anfibios;
-    }
+		return "Mamiferos: " + Mamifero.cantidadMamiferos() + "\n" +
+           "Aves: " + Ave.cantidadAves() + "\n" +
+           "Reptiles: " + Reptil.cantidadReptiles() + "\n" +
+           "Peces: " + Pez.cantidadPeces() + "\n" +
+           "Anfibios: " + Anfibio.cantidadAnfibios();
+	}
 	
 	public String toString() {
-        if (zona != null) {
-            return "Mi nombre es " + nombre +
-                   ", tengo una edad de " + edad +
-                   ", habito en " + habitat +
-                   " y mi genero es " + genero +
-                   ", la zona en la que me ubico es " + zona.getNombre() +
-                   ", en el " + zona.getZoo().getNombre() ;
-        } else {
-            return "Mi nombre es " + nombre +
-                   ", tengo una edad de " + edad +
-                   ", habito en " + habitat +
-                   " y mi genero es " + genero ;
-        }
-    }
+		if (zona != null) {
+			String zooNombre = (zona.getZoo() != null) ? zona.getZoo().getNombre() : "desconocido";
+			return "Mi nombre es " + nombre +
+				   ", tengo una edad de " + edad +
+				   ", habito en " + habitat +
+				   " y mi genero es " + genero +
+				   ", la zona en la que me ubico es " + zona.getNombre() +
+				   ", en el " + zooNombre;
+		} else {
+			return "Mi nombre es " + nombre +
+				   ", tengo una edad de " + edad +
+				   ", habito en " + habitat +
+				   " y mi genero es " + genero;
+		}
+	}
 	
 	public String getNombre() {
 		return nombre;
