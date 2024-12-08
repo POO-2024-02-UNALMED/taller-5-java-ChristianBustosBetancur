@@ -26,12 +26,19 @@ public class Animal {
 	}
 	
 	public static String totalPorTipo() {
-		return "Mamiferos: " + Mamifero.cantidadMamiferos() + "\n" +
-           "Aves: " + Ave.cantidadAves() + "\n" +
-           "Reptiles: " + Reptil.cantidadReptiles() + "\n" +
-           "Peces: " + Pez.cantidadPeces() + "\n" +
-           "Anfibios: " + Anfibio.cantidadAnfibios();
-	}
+    
+        int mamiferos = Mamifero.cantidadMamiferos();
+        int aves = Ave.cantidadAves();
+        int reptiles = Reptil.cantidadReptiles();
+        int peces = Pez.cantidadPeces();
+        int anfibios = Anfibio.cantidadAnfibios();
+
+        return "Mamiferos: " + mamiferos +
+               "\nAves: " + aves +
+               "\nReptiles: " + reptiles +
+               "\nPeces: " + peces +
+               "\nAnfibios: " + anfibios;
+    }
 	
 	public String toString() {
         if (zona != null) {
