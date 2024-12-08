@@ -13,7 +13,10 @@ public class Pez extends Animal {
 		this.cantidadAletas = cantidadAletas;
 		listado.add(this);
 	}
-	public Pez(){}
+	public Pez(){
+		super();
+		listado.add(this);
+	}
 	
 	public static int cantidadPeces(){
 		return listado.size();
@@ -45,4 +48,11 @@ public class Pez extends Animal {
 	public void setCantidadAletas(int cantidadAletas) {
 		this.cantidadAletas = cantidadAletas;
 	}
+	public ArrayList<Pez> getListado(){
+		return listado;
+	}
+	public static void setListado(ArrayList<Pez> listado){
+		Pez.listado = listado;
+	}
+
 }

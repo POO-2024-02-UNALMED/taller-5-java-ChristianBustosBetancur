@@ -14,7 +14,10 @@ public class Reptil extends Animal {
 		this.largoCola = largoCola;
 		listado.add(this);
 	}
-	public Reptil(){}
+	public Reptil(){
+		super();
+		listado.add(this);
+	}
 
 	public static int cantidadReptiles() {
 		return listado.size();
@@ -46,8 +49,10 @@ public class Reptil extends Animal {
 	public void setLargoCola(int largoCola) {
 		this.largoCola = largoCola;
 	}
-	
-	
-		
-
+	public ArrayList<Reptil> getListado(){
+		return listado;
+	}
+	public void setListado(ArrayList<Reptil> listado){
+		Reptil.listado = listado;
+	}
 }

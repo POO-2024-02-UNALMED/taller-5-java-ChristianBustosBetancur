@@ -12,7 +12,10 @@ public class Ave extends Animal{
 		this.colorPlumas = colorPlumas;
 		listado.add(this);
 	}
-	public Ave() {}
+	public Ave(){
+		super();
+        listado.add(this);
+	}
 	
 
 	public static int cantidadAves() {
@@ -38,4 +41,10 @@ public class Ave extends Animal{
 	public void setColorPiel(String colorPlumas) {
 		this.colorPlumas = colorPlumas;
 	}
+	public static ArrayList<Ave> getListado() {
+        return listado;
+    }
+    public static void setListado(ArrayList<Ave> listado) {
+        Ave.listado = listado;
+    }
 }

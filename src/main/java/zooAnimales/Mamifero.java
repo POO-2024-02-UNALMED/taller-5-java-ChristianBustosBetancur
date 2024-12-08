@@ -15,7 +15,8 @@ public class Mamifero extends Animal {
 		this.patas = patas;
 		listado.add(this);
 	}
-	public Mamifero() {
+	public Mamifero(){
+		super();
 		listado.add(this);
 	}
 	
@@ -48,6 +49,13 @@ public class Mamifero extends Animal {
 	public void setPatas(int patas){
 		this.patas = patas;
 	}
+	public static ArrayList<Mamifero> getListado() {
+        return listado;
+    }
+
+    public static void setListado(ArrayList<Mamifero> listado) {
+        Mamifero.listado = listado;
+    }
 	
 	
 
