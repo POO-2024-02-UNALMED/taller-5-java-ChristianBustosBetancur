@@ -14,6 +14,7 @@ public class Animal {
 		this.edad = edad;
 		this.habitat = habitat;
 		this.genero = genero;
+		this.zona = null;
 		totalAnimales++;
 	}
 	public Animal(){
