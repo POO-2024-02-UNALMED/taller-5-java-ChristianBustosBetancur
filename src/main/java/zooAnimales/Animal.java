@@ -52,16 +52,16 @@ public class Animal {
 	public String getHabitat(){
 		return habitat;
 	}
-	public void setHabitat(){
+	public void setHabitat(String habitat){
 		this.habitat = habitat;
 	}
 	public String getGenero(){
 		return genero;
 	}
-	public void setGenero(){
+	public void setGenero(String genero){
 		this.genero = genero;
 	}
-	public void setZona(){
+	public void setZona(Zona zona){
 		this.zona = zona;
 	}
 	public Zona getZona(){
