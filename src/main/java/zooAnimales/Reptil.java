@@ -1,4 +1,4 @@
-package ZooAnimales;
+package zooAnimales;
 import java.util.ArrayList;
 
 public class Reptil extends Animal {
