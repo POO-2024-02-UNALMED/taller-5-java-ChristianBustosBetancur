@@ -43,7 +43,7 @@ public class Animal {
 		this.nombre = nombre;
 	}
 	public int edad(){
-		return super.edad();
+		return edad;
 	}
 	public void setEdad(int edad){
 		this.edad = edad;
