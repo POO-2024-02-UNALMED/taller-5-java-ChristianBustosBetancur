@@ -45,4 +45,5 @@ public class Anfibio extends Animal {
 		this.venenoso = venenoso;
 	}
 
+	
 }
