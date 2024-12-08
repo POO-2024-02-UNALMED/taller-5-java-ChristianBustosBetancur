@@ -17,7 +17,9 @@ public class Animal {
 		this.zona = zona;
 		totalAnimales++;
 	}
-	public Animal(){}
+	public Animal(){
+		totalAnimales++;
+	}
 	
 	public String movimiento() {
 		return "desplazarse";
@@ -32,10 +34,22 @@ public class Animal {
 	}
 	
 	public String toString() {
-		return "Mi nombre es " + nombre + ", tengo una edad de"+ edad +", habito en "+ habitat + 
-				"y mi genero es"+ genero + ", la zona en la que me ubico es"+ zona + ", en el "+ 
-				Zona.getZoo();
+		if (zona != null) {
+			String zooNombre = (zona.getZoo() != null) ? zona.getZoo().getNombre() : "desconocido";
+			return "Mi nombre es " + nombre +
+				   ", tengo una edad de " + edad +
+				   ", habito en " + habitat +
+				   " y mi genero es " + genero +
+				   ", la zona en la que me ubico es " + zona.getNombre() +
+				   ", en el " + zooNombre;
+		} else {
+			return "Mi nombre es " + nombre +
+				   ", tengo una edad de " + edad +
+				   ", habito en " + habitat +
+				   " y mi genero es " + genero;
+		}
 	}
+	
 	public String getNombre() {
 		return nombre;
 	}
