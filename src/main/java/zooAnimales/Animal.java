@@ -56,7 +56,7 @@ public class Animal {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public int edad(){
+	public int getEdad(){
 		return edad;
 	}
 	public void setEdad(int edad){
@@ -79,6 +79,9 @@ public class Animal {
 	}
 	public Zona getZona(){
 		return zona;
+	}
+	public static int getTotalAnimales() {
+		return totalAnimales;
 	}
 	
 	
